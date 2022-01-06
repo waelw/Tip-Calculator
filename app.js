@@ -36,6 +36,7 @@ tipButtons.forEach(t => {
             console.log("hello")
             currentActive.classList.remove("active")
             currentActive = null
+            tip = 0
         }
 
 
