@@ -60,8 +60,28 @@ numberOfPeople.addEventListener("input", (e) => {
 })
 
 function calculate() {
+    if (number == 0) {
+        amount.innerText = "ERR"
+        total.innerText = "ERR"
+        return 0;
+    }
     let amountRes = bill * (1 + tip / 100) / number
     let tipRes = bill * (tip / 100) / number
-    amount.innerText = "$" + `${tipRes}`
-    total.innerText = "$" + `${amountRes}`
+    amount.innerText = "$" + `${tipRes.toFixed(2)}`
+    total.innerText = "$" + `${amountRes.toFixed(2)}`
 }
+
+
+reset.addEventListener("click", () => {
+    billInput.value = 0;
+    bill = 0;
+    tip = 0;
+    number = 1;
+    numberOfPeople.value = 0
+    tipButtons.forEach(t => {
+        t.classList.remove("active");
+    })
+
+    calculate()
+
+})
