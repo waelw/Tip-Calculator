@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  
+
+  <div class="container">
+    <div class="title">
+      <h1>SPLI</h1>
+      <h1>TTER</h1>
+    </div>
+    <div class="app-container">
+      <div class="app">
+        <div class="bill">
+          <label for="bill">
+            <h2>Bill</h2>
+            <object data="./images/icon-dollar.svg"></object>
+            <input id="bill" name="bill" type="number" placeholder="Bill" />
+          </label>
+        </div>
+        <div class="select">
+          <h2>Select Tip %</h2>
+          <div class="grid">
+            <button data-value="5" class="btn">5%</button>
+            <button data-value="10"  class="btn">10%</button>
+            <button data-value="15"  class="btn">15%</button>
+            <button data-value="25"  class="btn">25%</button>
+            <button data-value="50"  class="btn">50%</button>
+            <input id="customRate" name="customRate" placeholder="Custom"
+            type="number">
+          </div>
+        </div>
+        <div class="number">
+          <label for="number">
+            Number Of People
+            <object data="./images/icon-person.svg"></object>
+            <input id="number" name="number" type="number" placeholder="Number Of People" />
+          </label>
+        </div>
+        <div class="result">
+        <div class="amount">
+          <div class="left">
+            <p>
+              Tip Amount
+            </p>
+            <span>/ person</span>
+          </div>
+          <div id="amount" class="right">
+            $0
+          </div>
+        </div>
+
+        <div class="Total">
+          <div class="left">
+            <p>
+              Total
+            </p>
+            <span>/ person</span>
+          </div>
+          <div id="total" class="right">$0</div>
+        </div>
+
+        <div id="reset" class="reset">
+          <button>RESET</button>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+  <script src="./app.js"></script>
+</body>
+</html>

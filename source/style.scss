@@ -1,0 +1,217 @@
+$StrongCyan: hsl(172, 67%, 45%);
+$VeryDarCyan: hsl(183, 100%, 15%);
+$DarkGrayishCyan: hsl(186, 14%, 43%);
+$DarkGrayishCyan2: hsl(184, 14%, 56%);
+$LightGrayishCyan: hsl(185, 41%, 84%);
+$LightGrayishCyan2: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+    background-color: $LightGrayishCyan;
+    font-family:"space Mono";
+    overflow: hidden;
+}
+input,button{
+    font-family:"space Mono";
+}
+
+.container{
+    width : 375px;
+    height:100vh;    
+    .title{
+        width : 100%;
+        min-height :10vh;
+        display: flex;
+        justify-content: center  ;
+        flex-direction:column ;
+        align-items: center;
+        color: $DarkGrayishCyan;
+        h1{
+            margin : 0;
+            padding: 0;
+            letter-spacing: 8px;
+            font-size: 20px;
+        }
+    }
+    .app-container{
+        width : 100%;
+        min-height: 90vh;
+        background-color: $White;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .app{
+            height: 90vh;
+            width : 85%;
+            .bill
+            {   
+                h2{
+                    color :hsl(184, 14%, 56%);
+                    font-size : 16px;
+                }
+                width : 100%;
+                color :hsl(184, 14%, 56%);
+                position: relative;
+                margin-bottom: 20px;
+                label{
+                    object{
+                        position: absolute;
+                        left: 5%;
+                        top:55%;
+                        z-index: 2;
+                    }
+                    input{
+                        font-weight: 700;
+                        color : $VeryDarCyan;
+                        display: block;
+                        border : none;
+                        width : 90%;
+                        padding : 8px 15px;
+                        border-radius: 5px;
+                        background-color:$LightGrayishCyan2;
+                        direction: rtl;
+                        font-size: 24px;
+                        &:active , &:focus{
+                            border: none;
+                            outline: $StrongCyan 2px solid;
+                        }
+                    }
+                }
+            }
+
+            .select{
+                width : 100%;
+                h2{
+                    color :hsl(184, 14%, 56%);
+                    font-size : 16px;
+                }
+                .grid{
+                    display: grid;
+                    grid-template: 1fr/1fr 1fr;
+                    grid-gap: 5%;
+                    
+                    input {
+                        width : 96%;
+                        border : none;
+                        direction: rtl;
+                    }
+                    input,button{
+                        padding : 5px 0;
+                        font-size : 24px;
+                    }
+                    button{
+                        color :$White;
+                        font-weight: 700;
+                        background-color: $VeryDarCyan;
+                        outline: none;
+                        border:none;
+                        border-radius: 5px;
+                        &.active{
+                            background-color: $StrongCyan;
+                            
+                        }
+                    }
+                }
+                margin-bottom: 30px;
+            }
+
+            .number
+            {   
+                h2{
+                    color :hsl(184, 14%, 56%);
+                    font-size : 16px;
+                }
+                width : 100%;
+                color :hsl(184, 14%, 56%);
+                position: relative;
+                margin-bottom: 20px;
+                label{
+                    object{
+                        position: absolute;
+                        left: 5%;
+                        top:55%;
+                        z-index: 2;
+                    }
+                    input{
+                        font-weight: 700;
+                        color : $VeryDarCyan;
+                        display: block;
+                        border : none;
+                        width : 90%;
+                        padding : 8px 15px;
+                        border-radius: 5px;
+                        background-color:$LightGrayishCyan2;
+                        direction: rtl;
+                        font-size: 24px;
+                        &:active , &:focus{
+                            border: none;
+                            outline: $StrongCyan 2px solid;
+                        }
+                    }
+                }
+            }
+
+            .result{
+                background-color: $VeryDarCyan;
+                border-radius: 10px;
+                padding :30px;
+                p{
+                    padding: 0;
+                    margin: 0;
+                }
+                .amount , .Total{
+                    color : $White;
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 700;
+                        color : $LightGrayishCyan;
+                    }
+
+                    .right{
+                        font-size : 24px;
+                        font-weight: 700;
+                        color : $StrongCyan;
+                    }
+                }
+
+                .Total{
+                    margin-bottom: 10px;
+                }
+
+                .reset{
+                    button{
+                        font-weight: 700;
+                        color : $VeryDarCyan;
+                        background-color: $StrongCyan;
+                        border : none;
+                        outline: none;
+                        font-size:20px;
+                        width : 100%;
+                        padding : 5px 0;
+                        border-radius: 5px;
+
+                    
+                        
+                    }
+
+                }
+            }
+        }
+    }
+}
