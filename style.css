@@ -1,13 +1,9 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #c5e4e7;
   font-family: "space Mono";
-  overflow: hidden;
 }
 
 input, button {
@@ -15,94 +11,91 @@ input, button {
 }
 
 .container {
-  width: 375px;
-  height: 100vh;
+  max-width: 23rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .container .title {
   width: 100%;
-  min-height: 10vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: #5e7a7d;
 }
 .container .title h1 {
   margin: 0;
   padding: 0;
-  letter-spacing: 8px;
-  font-size: 20px;
+  letter-spacing: 0.5rem;
+  font-size: 1.25rem;
+  color: #5e7a7d;
 }
 .container .app-container {
-  width: 100%;
-  min-height: 90vh;
+  min-width: 100%;
   background-color: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 1.25rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-.container .app-container .app {
-  height: 90vh;
-  width: 85%;
+.container .app-container .app1, .container .app-container .app2 {
+  min-width: 85%;
 }
-.container .app-container .app .bill {
+.container .app-container .app1 .bill, .container .app-container .app2 .bill {
   width: 100%;
   color: #7f9c9f;
   position: relative;
-  margin-bottom: 20px;
 }
-.container .app-container .app .bill h2 {
+.container .app-container .app1 .bill h2, .container .app-container .app2 .bill h2 {
   color: #7f9c9f;
-  font-size: 16px;
+  font-size: 1rem;
 }
-.container .app-container .app .bill label object {
+.container .app-container .app1 .bill label object, .container .app-container .app2 .bill label object {
   position: absolute;
   left: 5%;
-  top: 55%;
+  top: 56%;
   z-index: 2;
 }
-.container .app-container .app .bill label input {
+.container .app-container .app1 .bill label input, .container .app-container .app2 .bill label input {
   font-weight: 700;
   color: #00494d;
   display: block;
   border: none;
   width: 90%;
-  padding: 8px 15px;
-  border-radius: 5px;
+  padding: 0 1rem;
+  border-radius: 0.3125rem;
   background-color: #f4fafa;
   direction: rtl;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
-.container .app-container .app .bill label input:active, .container .app-container .app .bill label input:focus {
+.container .app-container .app1 .bill label input:active, .container .app-container .app1 .bill label input:focus, .container .app-container .app2 .bill label input:active, .container .app-container .app2 .bill label input:focus {
   border: none;
   outline: #26c0ab 2px solid;
 }
-.container .app-container .app .select {
+.container .app-container .app1 .select, .container .app-container .app2 .select {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
-.container .app-container .app .select h2 {
+.container .app-container .app1 .select h2, .container .app-container .app2 .select h2 {
   color: #7f9c9f;
-  font-size: 16px;
+  font-size: 1rem;
 }
-.container .app-container .app .select .grid {
+.container .app-container .app1 .select .grid, .container .app-container .app2 .select .grid {
   display: grid;
-  grid-template: 1fr/1fr 1fr;
-  grid-gap: 5%;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  align-content: center;
 }
-.container .app-container .app .select .grid input {
+.container .app-container .app1 .select .grid input, .container .app-container .app2 .select .grid input {
   width: 96%;
   border: none;
   direction: rtl;
 }
-.container .app-container .app .select .grid input, .container .app-container .app .select .grid button {
-  padding: 5px 0;
-  font-size: 24px;
+.container .app-container .app1 .select .grid input, .container .app-container .app1 .select .grid button, .container .app-container .app2 .select .grid input, .container .app-container .app2 .select .grid button {
+  font-size: 1.25rem;
 }
-.container .app-container .app .select .grid button {
+.container .app-container .app1 .select .grid button, .container .app-container .app2 .select .grid button {
   color: white;
   font-weight: 700;
   background-color: #00494d;
@@ -110,82 +103,108 @@ input, button {
   border: none;
   border-radius: 5px;
 }
-.container .app-container .app .select .grid button.active {
+.container .app-container .app1 .select .grid button.active, .container .app-container .app2 .select .grid button.active {
   background-color: #26c0ab;
 }
-.container .app-container .app .number {
+.container .app-container .app1 .number, .container .app-container .app2 .number {
   width: 100%;
   color: #7f9c9f;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
-.container .app-container .app .number h2 {
+.container .app-container .app1 .number h2, .container .app-container .app2 .number h2 {
   color: #7f9c9f;
-  font-size: 16px;
+  font-size: 1rem;
 }
-.container .app-container .app .number label object {
+.container .app-container .app1 .number label, .container .app-container .app2 .number label {
+  font-weight: 700;
+}
+.container .app-container .app1 .number label object, .container .app-container .app2 .number label object {
   position: absolute;
   left: 5%;
   top: 55%;
   z-index: 2;
 }
-.container .app-container .app .number label input {
+.container .app-container .app1 .number label input, .container .app-container .app2 .number label input {
   font-weight: 700;
   color: #00494d;
   display: block;
   border: none;
   width: 90%;
-  padding: 8px 15px;
+  padding: 0 15px;
   border-radius: 5px;
   background-color: #f4fafa;
   direction: rtl;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
-.container .app-container .app .number label input:active, .container .app-container .app .number label input:focus {
+.container .app-container .app1 .number label input:active, .container .app-container .app1 .number label input:focus, .container .app-container .app2 .number label input:active, .container .app-container .app2 .number label input:focus {
   border: none;
   outline: #26c0ab 2px solid;
 }
-.container .app-container .app .result {
+.container .app-container .app2 .result {
   background-color: #00494d;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
+  margin-bottom: 1.5rem;
 }
-.container .app-container .app .result p {
+.container .app-container .app2 .result p {
   padding: 0;
   margin: 0;
 }
-.container .app-container .app .result .amount, .container .app-container .app .result .Total {
+.container .app-container .app2 .result .amount, .container .app-container .app2 .result .Total {
   color: white;
   display: flex;
   justify-content: space-between;
 }
-.container .app-container .app .result .amount p, .container .app-container .app .result .Total p {
-  font-size: 16px;
+.container .app-container .app2 .result .amount p, .container .app-container .app2 .result .Total p {
+  font-size: 1rem;
   font-weight: 700;
 }
-.container .app-container .app .result .amount span, .container .app-container .app .result .Total span {
+.container .app-container .app2 .result .amount span, .container .app-container .app2 .result .Total span {
   font-size: 12px;
   font-weight: 700;
   color: #c5e4e7;
 }
-.container .app-container .app .result .amount .right, .container .app-container .app .result .Total .right {
-  font-size: 24px;
+.container .app-container .app2 .result .amount .right, .container .app-container .app2 .result .Total .right {
+  font-size: 1.5rem;
   font-weight: 700;
   color: #26c0ab;
 }
-.container .app-container .app .result .Total {
+.container .app-container .app2 .result .Total {
   margin-bottom: 10px;
 }
-.container .app-container .app .result .reset button {
+.container .app-container .app2 .result .reset button {
   font-weight: 700;
   color: #00494d;
   background-color: #26c0ab;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 1.5rem;
   width: 100%;
   padding: 5px 0;
   border-radius: 5px;
+}
+
+@media (min-width: 60rem) {
+  .container {
+    max-width: 90%;
+  }
+  .container .app-container {
+    flex-direction: row !important;
+    justify-content: space-evenly;
+  }
+  .container .app-container .app1, .container .app-container .app2 {
+    min-width: 48% !important;
+  }
+  .container .app-container .app1 .select .grid, .container .app-container .app2 .select .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container .app-container .app2 {
+    margin-top: 1%;
+  }
+  .container .app-container .app2 .reset {
+    margin-top: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
