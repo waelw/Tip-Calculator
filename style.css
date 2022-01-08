@@ -40,7 +40,7 @@ input, button {
   align-items: center;
 }
 .container .app-container .app1, .container .app-container .app2 {
-  min-width: 85%;
+  width: 85%;
 }
 .container .app-container .app1 .bill, .container .app-container .app2 .bill {
   width: 100%;
@@ -194,7 +194,7 @@ input, button {
     justify-content: space-evenly;
   }
   .container .app-container .app1, .container .app-container .app2 {
-    min-width: 48% !important;
+    width: 48% !important;
   }
   .container .app-container .app1 .select .grid, .container .app-container .app2 .select .grid {
     grid-template-columns: 1fr 1fr 1fr;
