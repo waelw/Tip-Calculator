@@ -52,6 +52,7 @@ customTip.addEventListener("input", (e) => {
     })
 
     tip = e.target.value
+    calculate()
 })
 
 numberOfPeople.addEventListener("input", (e) => {
